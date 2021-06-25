@@ -1,0 +1,33 @@
+<p>
+    <mat-toolbar style="background-color: darkturquoise;">
+        <span class="headerMain">My Todos</span>
+    </mat-toolbar>
+</p>
+<div>
+
+    <div >
+        <mat-card class="todoForm">
+            <mat-form-field class="form-field">
+                <mat-label>Add a todo</mat-label>
+                <input matInput type="text" [(ngModel)]="inputTodo" required>
+            </mat-form-field>
+            <button mat-raised-button style="background-color: lemonchiffon; " (click)="onAdd()" [disabled]="!inputTodo">Add todo</button>
+        </mat-card>
+        
+    </div>
+    
+    <div *ngFor="let i of todos; let z =index" class="{{(i.completed?'strikethrough':'')}}" class="todomatcards">
+        <mat-card class="addTodo">
+            <mat-card-content style="overflow-wrap: anywhere;">
+                <p (click)="toggleData(z)">
+                    {{i.content}}
+                </p>
+            </mat-card-content>
+            <mat-card-actions class="removeBtn">
+                <button mat-raised-button style="background-color: lemonchiffon;" (click)="onRemove(z)">Remove</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+
+
+</div>

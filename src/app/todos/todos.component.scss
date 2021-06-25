@@ -1,0 +1,36 @@
+.form-field {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .strikethrough {
+    text-decoration: line-through;
+  }
+  .headerMain{
+    margin: 0 auto;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: cursive;
+    color: white;
+    padding: 15px;
+  }
+  .todomatcards{
+    width: 33.3%;
+    margin: 0 auto;
+    padding: 5px;
+  }
+  .addTodo{
+    display: flex;
+    align-items: center;
+    border: 1px solid darkturquoise;
+  }
+  .todoForm{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid darkturquoise;
+  }
+  .removeBtn{
+    justify-content: flex-end;
+    margin-inline-start: auto;
+  }
